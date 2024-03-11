@@ -143,6 +143,7 @@ h1 {
   font-family: 'Aesthetic', system-ui;
 }
 
+
 a {
   text-decoration: no-decoration;
 }
@@ -164,11 +165,11 @@ body {
 
 #hero-title {
   
-  font-size: 12rem;
+  font-size: 14rem;
   line-height: 90%;
   font-family: 'Aesthetic';
   text-transform: uppercase;
-  letter-spacing: -0.5rem;
+  letter-spacing: -0.4rem;
  
 }
 
@@ -192,13 +193,19 @@ body {
 #text-full {
   font-family: 'Aesthetic';
   font-size: 21.8rem;
-  letter-spacing: -0.8rem;
+  letter-spacing: -0.6rem;
   text-transform: uppercase;
 }
 
 #card {
   background-color: rgb(14,14,14,0.1);
+  transition: all 0.4s ease-in;
 }
+
+#card:hover {
+  background-color: rgb(0,0,0,0.5);
+}
+
 
 #offer {
   background-image: url('images/Dark-Souls-3.png');
@@ -207,3 +214,33 @@ body {
   background-position: center center;
   filter: grayscale(100%);
 }
+
+#artorias {
+  position: absolute;
+  filter: grayscale(100%);
+  filter: brightness(25%);
+  z-index: -1;
+}
+
+
+@media (min-width: 0px) and (max-width: 1200px) { 
+
+ #text-full {
+    font-size: 4.7rem;
+    letter-spacing: 0;
+  }
+
+  #hero-title {
+    font-size: 4rem;
+    letter-spacing: 0;
+    line-height: 100%;
+  }
+
+  #showcase {
+    width: 150vw;
+    margin-left: -25vw;
+    border-radius: 100%;
+    padding-bottom: 2rem;
+} 
+
+ }

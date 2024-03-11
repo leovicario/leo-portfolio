@@ -4,14 +4,14 @@ import '../css/responsive.css'
 
 import Header from '../components/Header.jsx'
 import Footer from '../components/Footer.jsx'
-import Scene from '../components/Scene.jsx'
+import Lion from '../components/Lion.jsx'
 import Offer from '../components/Offer.jsx';
 import Showcase from '../components/Showcase.jsx';
 
 const Home = () => {
   return (
     <main className="sm:p-0 xl:p-4 w-full">
-      {/* <Scene /> */}
+      <Lion />
       
       <Header />
 
@@ -20,7 +20,7 @@ const Home = () => {
           <div id="hero" className="m-auto py-32 xl:py-32 xl:min-h-screen flex flex-col gap-8 justify-center items-center w-full">
             {/* <h1 id="hero-title" className="text-center font-bold">Digital <br/>designer for<br/> founders</h1> */}
             <img className="w-full xl:w-8/12" src="images/hero.svg" />
-            <p className="uppercase">From zero to product</p>
+            <p className="text-accent tracking-wider uppercase">From zero to product</p>
             <img className="w-12 h-12" src="/images/crescent.svg" />
           </div>
 
@@ -54,7 +54,7 @@ const Home = () => {
       </div>  
 
       <div id="" className="w-full flex place-content-center items-center min-h-screen">
-        <img id="artorias" src="images/Dark-Souls-3.png" className="absolute z-auto" />
+        {/* <img id="artorias" src="images/Dark-Souls-3.png" className="absolute z-auto" /> */}
         <p className="text-5xl text-left xl:text-center w-full xl:w-1/2">Aesthetic strategist.<br/><br/>
           Forging digital experiences since 2018.<br/><br/>
           Taking your idea from zero to product market fit through continuous design and thinking.<br/><br/>

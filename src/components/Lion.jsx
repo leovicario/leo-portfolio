@@ -2,6 +2,7 @@ import React from 'react'
 
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
@@ -34,7 +35,15 @@ scene.background = new THREE.Color( 0x2C2C2C);
 let lionMesh;
 
 const loader = new GLTFLoader(); 
-loader.load('/models/lion-2.glb', (gltf) => {
+
+const dracoLoader = new DRACOLoader();
+dracoLoader.setDecoderPath( 'https://www.gstatic.com/draco/v1/decoders/' );
+
+// dracoLoader.preload();
+
+loader.setDRACOLoader( dracoLoader );
+
+loader.load('/models/lion.glb', (gltf) => {
 
 
   gltf.scene.traverse(child => {
@@ -44,7 +53,6 @@ loader.load('/models/lion-2.glb', (gltf) => {
     }
   });
 
-  console.log(lionMesh);
     gltf.scene.scale.setScalar( 2 );
     gltf.scene.rotation.set(0,6,0)
     gltf.scene.position.set(30,0,0)
@@ -57,7 +65,6 @@ loader.load('/models/lion-2.glb', (gltf) => {
   lionMesh.material.emissive.set = 0xFFFFFF;
   
   camera.lookAt( lionMesh.position );
-  console.log(lionMesh.position)
 
   scene.add(gltf.scene);
 
@@ -97,7 +104,11 @@ loader.load('/models/lion-2.glb', (gltf) => {
 
 
 
-}, undefined, function (error) {
+}, function ( xhr ) {
+
+    console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+}, function (error) {
   console.error(error);   
 });
 

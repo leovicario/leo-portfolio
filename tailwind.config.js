@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'accent': '#FCE1BE',
+        'accent': '#cee633',
     },}
   },
   plugins: [],

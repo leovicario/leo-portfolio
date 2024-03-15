@@ -110,7 +110,8 @@
   --primary-color: #C00E28;
   /* --text-color: #FCE1BE; */
   --text-color: #F1F1F1;
-  --accent: #FCE1BE;
+  /* --accent: #FCE1BE; */
+  --accent: #cee633;
   --bg-color: #040404;
 
   /* font-family: 'Neue Haas Grotesk', system-ui, Inter, Helvetica, Arial, sans-serif; */
@@ -136,11 +137,16 @@ canvas, #scene {
   position: fixed !important;
   top: 0;
   left: 0;
-  z-index: -10;
+  z-index: -1;
+  filter: brightness(70%);
+}
+
+#main {
+  z-index: 10 !important;
 }
 
 h1 {
-  font-size: 8rem;
+  /* font-size: 8rem; */
   font-family: 'Aesthetic', system-ui;
 }
 
@@ -160,17 +166,37 @@ root::-webkit-scrollbar {
   
 }
 
+#hero * {
+  mix-blend-mode: difference;
+  touch-action: none;
+  pointer-events: auto !important;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+            user-drag: none;  
+   user-select: none;
+   -moz-user-select: none;
+   -webkit-user-drag: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+}
+
 body {
   margin: 0;
+  user-drag: none;  
+  user-select: none;
 }
 
 #hero-title {
   
-  font-size: 14rem;
+  /* font-size: 14rem; */
   line-height: 90%;
   font-family: 'Aesthetic';
   text-transform: uppercase;
-  letter-spacing: -0.4rem;
+  letter-spacing: -0.7rem;
  
 }
 
@@ -197,15 +223,15 @@ body {
   letter-spacing: -0.6rem;
   text-transform: uppercase;
 }
-
+/* 
 #card {
   background-color: rgb(14,14,14,0.1);
   transition: all 0.4s ease-in;
-}
+} */
 
-#card:hover {
+/* #card:hover {
   background-color: rgb(0,0,0,0.5);
-}
+} */
 
 
 #offer {

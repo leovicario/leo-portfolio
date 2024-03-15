@@ -1,28 +1,41 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+
 import '../css/main.css'
 import '../css/responsive.css'
 
 import Header from '../components/Header.jsx'
 import Footer from '../components/Footer.jsx'
-import Lion from '../components/Lion.jsx'
+import Abstract from '../components/Abstract.jsx'
 import Offer from '../components/Offer.jsx';
 import Showcase from '../components/Showcase.jsx';
+import Preloader from '../components/Preloader.jsx';
+
+import { motion} from "framer-motion"
 
 const Home = () => {
+
+  // const [showPreloader, setShowPreloader] = useState(true);
+
+
   return (
-    <main className="sm:p-0 xl:p-4 w-full">
-      <Lion />
+    <main id="main" className="sm:p-0 xl:p-4 w-full">
+      <Preloader/>
+      <Abstract />
       
       <Header />
 
-      <div id="padding-global" className="px-8 xl:px-32">
+      <div id="padding-global" className="px-8 xl:px-48">
 
-          <div id="hero" className="m-auto py-32 xl:py-32 xl:min-h-screen flex flex-col gap-8 justify-center items-center w-full">
-            {/* <h1 id="hero-title" className="text-center font-bold">Digital <br/>designer for<br/> founders</h1> */}
-            <img className="w-full xl:w-8/12" src="images/hero.svg" />
+          <motion.div id="hero" className="overflow-hidden m-auto py-32 xl:py-32 xl:min-h-screen flex flex-col gap-8 justify-center items-center w-full">
+           <motion.div className="w-full text-center flex flex-col items-center" initial={{opacity: 0}} whileInView={{opacity: 1}}> 
+               <h1 id="hero-title" className="text-7xl xl:text-[12rem] text-center font-bold">Digital <br/>designer for<br/> founders</h1> 
+               {/* <h2  className="text-7xl xl:text-[12rem] uppercase leading-[0.8] font-bold tracking-tight">Digital <br/>designer for<br/> founders</h2>  */}
+     
+              {/* <img className="w-full xl:w-8/12" src="images/hero.svg" /> */}
+            </motion.div>
             <p className="text-accent tracking-wider uppercase">From zero to product</p>
-            <img className="w-12 h-12" src="/images/crescent.svg" />
-          </div>
+
+          </motion.div>
 
          
               <Offer />
@@ -31,7 +44,7 @@ const Home = () => {
          
 
           <div className="py-24 xl:py-64  flex flex-col gap-12 xl:gap-16 xl:w-9/12">
-        <h2 className="text-6xl xl:text-8xl font-roman uppercase">Move the ball forward no matter what.</h2>
+        <h2 className="text-6xl xl:text-8xl font-bold uppercase">Move the ball forward no matter what.</h2>
         <p className="text-4xl font-roman leading-snug">Founders often get slowed down when it comes down to product execution.<br/>
            Instead of hiring multiple specialist roles, focus on working with a superstar that can execute from 0 to 1. <br/><br/>
         </p>
@@ -54,17 +67,16 @@ const Home = () => {
       </div>  
 
       <div id="" className="w-full flex place-content-center items-center min-h-screen">
-        {/* <img id="artorias" src="images/Dark-Souls-3.png" className="absolute z-auto" /> */}
-        <p className="text-5xl text-left xl:text-center w-full xl:w-1/2">Aesthetic strategist.<br/><br/>
+        <p className="text-5xl xl:text-7xl text-left xl:text-center xl:leading-tight font-medium w-full xl:w-1/2">Aesthetic strategist.<br/><br/>
           Forging digital experiences since 2018.<br/><br/>
           Taking your idea from zero to product market fit through continuous design and thinking.<br/><br/>
           The future belongs to the bold.</p>
       </div>
 
-      <div id="home-footer" className="py-32 min-h-screen flex flex-col gap-8 xl:text-center items-center place-content-center">
+      <div id="home-footer" className="py-32 h-screen xl:min-h-screen flex flex-col gap-8 xl:text-center xl:items-center place-content-center">
        
-        <h2 id="hero-title" className=" leading-none font-bold">Let's build<br/> the future</h2>
-        <a href="mailto:leo@leovicario.com" className="text-3xl font-light tracking-wide w-fit uppercase">leo@leovicario.com</a>
+        <h2 className="text-7xl xl:text-[12rem] uppercase leading-none font-bold tracking-tight">Let's build<br/> the future</h2>
+        <a href="mailto:leo@leovicario.com" className="text-accent uppercase text-2xl xl:text-4xl font-roman tracking-widest w-fit ">leo@leovicario.com</a>
 
       </div>
 

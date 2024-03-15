@@ -26,10 +26,10 @@ const Home = () => {
 
       <div id="padding-global" className="px-8 xl:px-48">
 
-          <motion.div id="hero" className="overflow-hidden m-auto py-32 xl:py-32 xl:min-h-screen flex flex-col gap-8 justify-center items-center w-full">
-           <motion.div className="w-full text-center flex flex-col items-center" initial={{opacity: 0}} whileInView={{opacity: 1}}> 
-               <h1 id="hero-title" className="text-7xl xl:text-[12rem] text-center font-bold">Digital <br/>designer for<br/> founders</h1> 
-               {/* <h2  className="text-7xl xl:text-[12rem] uppercase leading-[0.8] font-bold tracking-tight">Digital <br/>designer for<br/> founders</h2>  */}
+          <motion.div id="hero" className="m-auto py-16 xl:py-32 xl:min-h-screen flex flex-col gap-8 justify-center xl:items-center w-full">
+           <motion.div className="w-full text-center flex flex-col xl:items-center" initial={{opacity: 0}} whileInView={{opacity: 1}}> 
+               {/* <h1 id="hero-title" className="text-7xl xl:text-[12rem] text-center font-bold">Digital <br/>designer for<br/> founders</h1>  */}
+               <h1 className="text-[4rem] text-left leading-none xl:leading-[0.8] xl:text-center xl:text-[13rem] uppercase leading-[0.8] font-bold tracking-tight">Digital <br/>designer for<br/> founders</h1>  
      
               {/* <img className="w-full xl:w-8/12" src="images/hero.svg" /> */}
             </motion.div>
@@ -44,7 +44,8 @@ const Home = () => {
          
 
           <div className="py-24 xl:py-64  flex flex-col gap-12 xl:gap-16 xl:w-9/12">
-        <h2 className="text-6xl xl:text-8xl font-bold uppercase">Move the ball forward no matter what.</h2>
+        {/* <h2 className="text-6xl xl:text-8xl font-bold uppercase">Move the ball forward no matter what.</h2> */}
+        <p className="text-6xl xl:text-9xl font-bold uppercase xl:leading-tighter xl:tracking-[-0.2rem] ">Move the ball forward no matter what. </p>
         <p className="text-4xl font-roman leading-snug">Founders often get slowed down when it comes down to product execution.<br/>
            Instead of hiring multiple specialist roles, focus on working with a superstar that can execute from 0 to 1. <br/><br/>
         </p>
@@ -63,7 +64,7 @@ const Home = () => {
       <Showcase />
 
       <div id="about" className="py-16 xl:p-48 flex flex-col gap-8 justify-center items-center w-full">
-        <h2 id="hero-title" className="text-left xl:text-center leading-none font-bold">Future oriented challenge solver</h2>
+        <h2 id="hero-title" className="text-left xl:text-center text-[5rem] xl:text-[13rem] leading-none font-bold">Future oriented challenge solver</h2>
       </div>  
 
       <div id="" className="w-full flex place-content-center items-center min-h-screen">
@@ -75,7 +76,7 @@ const Home = () => {
 
       <div id="home-footer" className="py-32 h-screen xl:min-h-screen flex flex-col gap-8 xl:text-center xl:items-center place-content-center">
        
-        <h2 className="text-7xl xl:text-[12rem] uppercase leading-none font-bold tracking-tight">Let's build<br/> the future</h2>
+        <h2 className="text-7xl xl:text-[13rem] uppercase leading-[0.9] font-bold tracking-tight">Let's build<br/> the future</h2>
         <a href="mailto:leo@leovicario.com" className="text-accent uppercase text-2xl xl:text-4xl font-roman tracking-widest w-fit ">leo@leovicario.com</a>
 
       </div>

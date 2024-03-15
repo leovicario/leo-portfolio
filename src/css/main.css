@@ -145,10 +145,10 @@ canvas, #scene {
   z-index: 10 !important;
 }
 
-h1 {
-  /* font-size: 8rem; */
+/* h1 {
+   font-size: 8rem; 
   font-family: 'Aesthetic', system-ui;
-}
+} */
 
 
 a {
@@ -167,7 +167,7 @@ root::-webkit-scrollbar {
 }
 
 #hero * {
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
   touch-action: none;
   pointer-events: auto !important;
   -webkit-touch-callout: none; /* iOS Safari */

@@ -1,11 +1,12 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useEffect } from 'react'
 
 import * as THREE from 'three';
 
 // import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
-import { createSculpture, createSculptureWithGeometry } from 'shader-park-core';
-import { spCode } from './Shader.jsx';
+import { createSculpture } from 'shader-park-core';
+// import { spCode } from './Shader.jsx';
+import {spCode} from './spCode.js';
 
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
@@ -13,7 +14,6 @@ import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js'
 
 const Abstract = () => {
 
-const rendererRef = useRef(null);
 
 useEffect(() => {
 
@@ -36,7 +36,22 @@ camera.rotateZ(40)
 // const material = new THREE.MeshBasicMaterial( { color: 0xffffff, map: texture } );
 
 
+// const spCode = function() {
 
+// setMaxReflections(1)
+// console.log(setMaxReflections);
+// let nc = vectorContourNoise(getSpace()*.2 + vec3(0, 0, time), .1, 1.5);
+// nc = pow(sin(nc*2)*.5 +.5, vec3(4))
+// //rotateX(PI/2);
+// occlusion(-5);
+// color(nc)
+// reflectiveColor(vec3(.3))
+// torus(2, 4.3
+//      )
+// shell(.01);sphere(0.5);
+
+
+// }
 
 // create shaderpark
 

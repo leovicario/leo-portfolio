@@ -1,6 +1,7 @@
 import './css/main.css'
 import './css/responsive.css'
 import Home from './pages/Home.jsx';
+import Cursor from './components/Cursor.jsx';
 
 import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 
@@ -21,6 +22,7 @@ function App() {
       infinite: false,
     }}>
         <Home />
+        <Cursor />
     </ReactLenis>
     </>
   )

@@ -8,7 +8,8 @@ const client = createClient({
 }
 )
 
-const data = await client.fetch(`count(*)`)
+// const data = await client.fetch(`count(*)`)
+const data = client.fetch(`count(*)`)
 console.log(`Number of documents: ${data}`)
 
 export default client

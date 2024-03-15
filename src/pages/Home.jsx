@@ -14,8 +14,6 @@ import { motion} from "framer-motion"
 
 const Home = () => {
 
-  // const [showPreloader, setShowPreloader] = useState(true);
-
 
   return (
     <main id="main" className="sm:p-0 xl:p-4 w-full">
@@ -44,7 +42,6 @@ const Home = () => {
          
 
           <div className="py-24 xl:py-64  flex flex-col gap-12 xl:gap-16 xl:w-9/12">
-        {/* <h2 className="text-6xl xl:text-8xl font-bold uppercase">Move the ball forward no matter what.</h2> */}
         <p className="text-6xl xl:text-9xl font-bold uppercase xl:leading-tighter xl:tracking-[-0.2rem] ">Move the ball forward no matter what. </p>
         <p className="text-4xl font-roman leading-snug">Founders often get slowed down when it comes down to product execution.<br/>
            Instead of hiring multiple specialist roles, focus on working with a superstar that can execute from 0 to 1. <br/><br/>

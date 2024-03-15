@@ -38,19 +38,6 @@ const Offer = () => {
       
         </motion.div>
 
-{/* 
-      <motion.div id="card" className="w-full mb-8 sm:mb-8 lg:mb-0 py-12 xl:py-32 flex items-end gap-8 h-full gap-8 border-none rounded-lg">
-        <div className="flex flex-col gap-8">
-           <img className="w-16 h-16" src="images/crescent.svg" />
-           <h2 className="text-4xl xl:text-9xl font-bold uppercase">MVP<br/> Creation</h2>
-           <p className="text-4xl">From zero to product. </p>
-          <motion.button  variants={buttonVariants}  whileHover="hover" href="mailto:leo@leovicario.com" className="w-fit text-accent p-4 border rounded-xl text-2xl underline xl:no-underline xl:text-4xl ">Tell me about your business 🡥</motion.button>
-        </div>
-        <div className="flex flex-col h-full content-center gap-8 px-32">
-        
-          </div>
-      </motion.div> */}
-
       
 
       </div>

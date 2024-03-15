@@ -7,19 +7,20 @@ export function spCode()  {
   // color(getRayDirection()+.2);
   // rotateY(getRayDirection().y*4+time)
   // boxFrame(vec3(.4), .02);
-  expand(.1);
+  // expand(.1);
   // blend(nsin(time)*.6)
   // sphere(.2);
   // sphere(.2);
   
-  rotateY(PI / 200 * time);
-  rotateX(mouse.y * PI / 2);
+  // rotateY(PI / 200 * time);
+  // rotateX(mouse.y * PI / 2);
 
   let s = getSpace();
   let scale = 1.3
   let amplitude = 9;
   let speed = 0.005 * time;
   let n = noise(s * amplitude + speed) * scale;
+  
   // color(0.8,0.3,0.7)
   color(0.5,0.9,0.1)
   metal(4);
@@ -28,8 +29,8 @@ export function spCode()  {
   
 
 
-  displace(mouse.x);
-  sphere(0.2)
+  // displace(mouse.x);
+  // sphere(0.2)
   // let scale = input(3., 0.0, 10.);
   // let s = getSpace();
   // let n = noise(s*scale+vec3(0, 0, time*0.1) + noise(s*scale+vec3(0, 0, time*0.1)));

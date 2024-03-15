@@ -6,7 +6,7 @@ import './css/main.css'
 import './css/responsive.css'
 
 import ErrorPage from './pages/404.jsx'
-import Blog from './pages/Blog.jsx'
+// import Blog from './pages/Blog.jsx'
 
 import {
   createBrowserRouter,
@@ -19,10 +19,10 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <ErrorPage />
   },
-  {
-    path: "/blog",
-    element: <Blog />,
-  },
+  // {
+  //   path: "/blog",
+  //   element: <Blog />,
+  // },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
